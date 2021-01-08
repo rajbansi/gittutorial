@@ -1,0 +1,98 @@
+
+remote- github
+pwd (present working directory)
+ls (list of file of that folder)
+cd file_in_which_you_want_to_go/
+rm -rf .git (delete git) - remove file
+  
+////working directory, staging area, git directory(repository)
+
+git init (create)
+
+git status (check status)
+
+git add --a (add all file to staging)
+git add .
+
+git commit -m "Initial Commit"  (to commit-from staging area to git directory(taking snapshot of that positions of file) the file to git repository)
+git commit -m "Changed file_name"  (commit means change it to final better code and mention name as of suitable meaning)
+
+git status
+
+git log  (who commited and when commited) - Author(who made a file), Commit(who made chnages to the file)
+
+*** changes the file
+
+git status (changed file in red)
+
+git log (who and when chnaged)
+
+git add file_name (file added to stage)
+git restore file_name (staged file to unstaged)
+
+git status
+
+git commit -m "Changed changed_file_name"  (commit means change it to final better code and mention name as of suitable meaning)
+
+
+
+
+touch .gitignore (to creatae file)
+touch error.log 
+
+(write error.log in .gitignore to ignore the changes of the file error.log)
+(if multiple files of name.log is there then write *.log in the file .gitignore)
+(All the files and folders can be ignore if it is written in .gitignore)
+
+
+
+
+
+
+
+
+
+git diff  (compare staging area to working directory - green to red)
+
+git diff --staged (compare previous commit to staging area)
+
+
+
+git commit -a -m "Direct Commit" (the file will not go to staged area, it will jump from modified to commit)
+
+
+
+git rm file_name (remove and then stage the file - no need to commit or stage - if i do manually then I have to delete the file and stage it by writing add command)
+
+git mv file_name  rename_file_name  (move or rename and stage after it)
+
+
+
+git rm --cached file_name   (if you dont want to track it(make it untracked) - for git, it is deleted file)
+
+
+
+git clone __url__ folder_name  (downloads all the files from that url and make those in a folder and give it a name)
+
+git log
+git log -p (history of files including diffs, which lines are removed and added)
+git log -p -2 
+git log -p -3   (two or three commits along with diffs)
+git log --stat  (gives authors, dates and number of changes(-+) has been done by them)
+git log --pretty=oneline  (all commit names in one line)
+git log --pretty=short  (all commits, author and message(commit name))
+git log --pretty=full  (with who commits)
+git log --since=2.days (history of last 2 days)
+git log --pretty=format:%h -- %an   (habbreviated hash commit, an=author name, search for more details of %code)
+
+
+git commit --amend  (to get a termial in which we can edit someone's commit message)
+git log -p -1 (history of previous comment)
+
+
+
+
+git checkout --file_name  (brings the removed content back if that content was previously committed) - If you have not commited priviously then don't use it
+git checkout -f (if you have changed something in two files and commited, then by this command, you can get back the previous commited code. close file and open it again)
+
+
